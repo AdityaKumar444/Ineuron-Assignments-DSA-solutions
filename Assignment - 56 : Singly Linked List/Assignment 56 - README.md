@@ -6,7 +6,6 @@ DSA Singly Linked List
 or not.
 
 Examples:
-
 Input: 14->21->11->30->10, X = 14
 
 Output: Yes
