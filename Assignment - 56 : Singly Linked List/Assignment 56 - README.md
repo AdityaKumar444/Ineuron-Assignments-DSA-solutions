@@ -17,10 +17,8 @@ or not.
   
   Output: No
 
-2. Write a function that takes a list sorted in non-decreasing order and deletes any
-duplicate nodes from the list. The list should only be traversed once.
-For example if the linked list is 11->11->11->21->43->43->60 then
-removeDuplicates() should convert the list to 11->21->43->60.
+2. Write a function that takes a list sorted in non-decreasing order and deletes any duplicate nodes from the list. The list should only be traversed once.
+For example if the linked list is 11->11->11->21->43->43->60 then removeDuplicates() should convert the list to 11->21->43->60.
 
 3. Given a singly linked list, write a function to swap elements pairwise.
 Input : 1->2->3->4->5->6->NULL
