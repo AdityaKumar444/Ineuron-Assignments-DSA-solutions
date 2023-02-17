@@ -1,0 +1,94 @@
+#include<bits/stdc++.h>
+using namespace std ;
+class node
+{
+    public:
+        int data ;
+        node *next ;
+};
+class SLL 
+{
+    private:
+        node *start ;
+    public:
+        SLL()
+        {
+            start = NULL ;
+        }
+        void insertAtStart(int);
+        void insertAtLast(int);
+        void deleteFirst();
+        node * search(int);
+        ~SLL()
+        {
+            while(start!=NULL)
+            {
+                deleteFirst();
+            }
+        }
+};
+void SLL::insertAtStart(int item)
+{
+    node *x = new node ;
+    x->data = item ;
+    x->next = start ;
+    start = x ;
+}
+void SLL::insertAtLast(int item)
+{
+    node *x = new node ;
+    node * traverse ;
+    x->data = item ;
+    x->next = NULL ;
+    if(start==NULL)
+    start = x ;
+    else
+    {
+        traverse = start ;
+        while(traverse->next!=NULL)
+        {
+            traverse = traverse->next ;
+        }
+        traverse->next = x ;
+    }
+}
+void SLL::deleteFirst()
+{
+    node * temp ;
+    if(start!=NULL)
+    {
+        temp = start->next ;
+        delete start ;
+        start = temp ;
+    }
+}
+node * SLL::search(int item)
+{
+    node *traverse ;
+    traverse = start ;
+    while(traverse!=NULL)
+    {
+        if(traverse->data==item)
+        return traverse ;
+        traverse = traverse->next ;
+    }
+    return traverse ;
+}
+int main()
+{
+    SLL obj ;
+    obj.insertAtStart(14);
+    obj.insertAtLast(21);
+    obj.insertAtLast(11);
+    obj.insertAtLast(30);
+    obj.insertAtLast(10);
+    if(obj.search(14)!=0)
+    cout << endl << "Yes" << endl ;
+    else
+    cout << endl << "No" << endl ;
+    if(obj.search(13)!=0)
+    cout << endl << "Yes" << endl ;
+    else
+    cout << endl << "No" << endl ;
+    return 0 ;
+}
