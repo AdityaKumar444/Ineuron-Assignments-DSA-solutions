@@ -1,0 +1,25 @@
+// SLL.cpp is provided in folder
+
+#include<bits/stdc++.h>
+#include "SLL.cpp"
+using namespace std ;
+class ExtendedSLL : public SLL
+{
+    public:
+        ExtendedSLL() : SLL() {}
+        bool checkLoop();
+};
+bool ExtendedSLL::checkLoop()
+{
+    unordered_set<node *> M ;   
+    node *traverse ;
+    traverse = getStart() ;
+    while(traverse!=NULL)
+    {
+        if(M.find(traverse)!=M.end())
+        return true ;
+        M.insert(traverse);
+        traverse = traverse->next ;
+    }
+    return false ;
+}
