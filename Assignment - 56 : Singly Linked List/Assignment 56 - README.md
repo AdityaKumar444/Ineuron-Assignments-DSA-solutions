@@ -6,10 +6,15 @@ DSA Singly Linked List
 or not.
 
   Examples:
+  
   Input: 14->21->11->30->10, X = 14
+  
   Output: Yes
+  
   Explanation: 14 is present in the linked list.
+  
   Input: 6->21->17->30->10->8, X = 13
+  
   Output: No
 
 2. Write a function that takes a list sorted in non-decreasing order and deletes any
