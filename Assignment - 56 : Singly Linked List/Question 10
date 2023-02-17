@@ -1,0 +1,49 @@
+// SLL.cpp is provided in folder
+
+#include<bits/stdc++.h>
+#include "SLL.cpp"
+using namespace std ;
+class ExtendedSLL : public SLL
+{
+    public:
+        ExtendedSLL() : SLL() {}
+        int count();
+        int findMiddle();
+};
+int ExtendedSLL::findMiddle()
+{
+    int cnt = count() , t ;
+    node *traverse ;
+    traverse = getStart();
+    if(cnt%2!=0)
+    {
+        t = cnt / 2 ;
+        while(t)
+        {
+            traverse = traverse->next ;
+            t-- ;
+        }
+    }
+    else if(cnt%2==0)
+    {
+        t = cnt / 2 ;
+        while(t)
+        {
+            traverse = traverse->next ;
+            t-- ;
+        }
+    }
+    return traverse->data ;
+}
+int ExtendedSLL::count()
+{
+    node *traverse ;
+    int cnt = 0 ;
+    traverse = getStart() ;
+    while(traverse!=NULL)
+    {
+        cnt++ ;
+        traverse = traverse->next ;
+    }
+    return cnt ;
+}
