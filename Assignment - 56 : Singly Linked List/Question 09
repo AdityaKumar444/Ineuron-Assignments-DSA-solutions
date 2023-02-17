@@ -1,0 +1,52 @@
+// SLL.cpp is provided in folder
+
+#include<bits/stdc++.h>
+#include "SLL.cpp"
+using namespace std ;
+class ExtendedSLL : public SLL
+{
+    public:
+        ExtendedSLL() : SLL() {}
+        bool palindrome();
+        int count();
+};
+bool ExtendedSLL::palindrome()
+{
+    int cnt = count();
+    int *arr {new int[cnt]{}} , i = 0 , j = cnt-1 ;
+    node *traverse ;
+    traverse = getStart() ;
+    while(traverse!=NULL)
+    {
+        arr[i] = traverse->data ;
+        i++ ;
+        traverse = traverse->next ;
+    }
+    for(i=0 ; i<cnt && j>=0 ; i++)
+    {
+        if(arr[i]==arr[j])
+        {
+            j-- ;
+            continue;
+        }
+        else 
+        {
+            delete[] arr ;
+            return false ;
+        }
+    }
+    delete[] arr ;
+    return true ;
+}
+int ExtendedSLL::count()
+{
+    node *traverse ;
+    int cnt = 0 ;
+    traverse = getStart() ;
+    while(traverse!=NULL)
+    {
+        cnt++ ;
+        traverse = traverse->next ;
+    }
+    return cnt ;
+}
