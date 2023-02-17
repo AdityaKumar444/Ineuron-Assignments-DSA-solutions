@@ -7,32 +7,18 @@ class ExtendedSLL : public SLL
 {
     public:
         ExtendedSLL() : SLL() {}
-        int greatest();
         int findOccurence(int);
 };
 int ExtendedSLL::findOccurence(int item)
 {
-    int max = greatest() ;
-    int *arr { new int[max]{}} ;
+    int count = 0 ;
     node *traverse ;
     traverse = getStart() ;
     while(traverse!=NULL)
     {
-        arr[traverse->data]++ ;
+        if(traverse->data==item)
+        count++ ;
         traverse = traverse->next ;
     }
-    return arr[item] ;
-}
-int ExtendedSLL::greatest()
-{
-    node *traverse ;
-    int highest = INT_MIN ;
-    traverse = getStart() ;
-    while(traverse->next!=NULL)
-    {
-        if(traverse->data > highest)
-        highest = traverse->data ;
-        traverse = traverse->next ;
-    }
-    return highest ;
+    return count ;
 }
