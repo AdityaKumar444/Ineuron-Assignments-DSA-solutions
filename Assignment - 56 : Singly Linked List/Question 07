@@ -1,0 +1,36 @@
+// SLL.cpp is provided in folder
+
+#include<bits/stdc++.h>
+#include "SLL.cpp"
+using namespace std ;
+class ExtendedSLL : public SLL
+{
+    public:
+        ExtendedSLL() : SLL() {}
+        int count();
+        int NthValueFromEnd(int);
+};
+int ExtendedSLL::NthValueFromEnd(int N)
+{   
+    int cnt = count() , round = cnt - N ; 
+    node *traverse ;
+    traverse = getStart();
+    while(round)
+    {
+        traverse = traverse->next ;
+        round--;
+    }
+    return traverse->data ;
+}
+int ExtendedSLL::count()
+{
+    node *traverse ;
+    int cnt = 0 ;
+    traverse = getStart() ;
+    while(traverse!=NULL)
+    {
+        cnt++ ;
+        traverse = traverse->next ;
+    }
+    return cnt ;
+}
