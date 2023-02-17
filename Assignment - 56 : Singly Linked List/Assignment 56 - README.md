@@ -18,42 +18,59 @@ or not.
   Output: No
 
 2. Write a function that takes a list sorted in non-decreasing order and deletes any duplicate nodes from the list. The list should only be traversed once.
-For example if the linked list is 11->11->11->21->43->43->60 then removeDuplicates() should convert the list to 11->21->43->60.
+
+  For example if the linked list is 11->11->11->21->43->43->60 then removeDuplicates() should convert the list to 11->21->43->60.
+
 
 3. Given a singly linked list, write a function to swap elements pairwise.
-Input : 1->2->3->4->5->6->NULL
-Output : 2->1->4->3->6->5->NULL
-Input : 1->2->3->4->5->NULL
-Output : 2->1->4->3->5->NULL
-Input : 1->NULL
-Output : 1->NULL
+
+  Input : 1->2->3->4->5->6->NULL
+
+  Output : 2->1->4->3->6->5->NULL
+
+  Input : 1->2->3->4->5->NULL
+
+  Output : 2->1->4->3->5->NULL
+
+  Input : 1->NULL
+
+  Output : 1->NULL
+
 
 4. Write a function that moves the last node to the front in a given Singly Linked List.
-Examples:
-Input: 1->2->3->4->5
-Output: 5->1->2->3->4
-Input: 3->8->1->5->7->12
-Output: 12->3->8->1->5->7
+  
+  Examples:
+  
+  Input: 1->2->3->4->5
+  
+  Output: 5->1->2->3->4
+  
+  Input: 3->8->1->5->7->12
+  
+  Output: 12->3->8->1->5->7
 
-5. Given a linked list, check if the linked list has a loop or not. The below diagram shows
-a linked list with a loop.
 
-6. Given a singly linked list and a key, count the number of occurrences of the given key
-in the linked list. For example, if the given linked list is 1->2->1->2->1->3->1 and the
-given key is 1, then the output should be 4.
+5. Given a linked list, check if the linked list has a loop or not. The below diagram shows a linked list with a loop.
 
-7. Given a Linked List and a number N, write a function that returns the value at the Nth
-node from the end of the Linked List.
-Examples:
-Input: 1 -> 2 -> 3 -> 4, N = 3
-Output: 2
-Input: 35 -> 15 -> 4 -> 20, N = 4
-Output: 35
+6. Given a singly linked list and a key, count the number of occurrences of the given key in the linked list.
+  
+  For example, if the given linked list is 1->2->1->2->1->3->1 and the given key is 1, then the output should be 4.
+
+7. Given a Linked List and a number N, write a function that returns the value at the Nth node from the end of the Linked List.
+  
+  Examples:
+  
+  Input: 1 -> 2 -> 3 -> 4, N = 3
+  
+  Output: 2
+  
+  Input: 35 -> 15 -> 4 -> 20, N = 4
+  
+  Output: 35
 
 8. Create a Stack using a singly linked list.
 
-9. In a singly linked list of characters, write a function that returns true if the given list is
-a palindrome, else false.
+9. In a singly linked list of characters, write a function that returns true if the given list is a palindrome, else false.
 
 10. Given a singly linked list, find the middle of the linked list. For example, if the given
 linked list is 1->2->3->4->5 then the output should be 3.
