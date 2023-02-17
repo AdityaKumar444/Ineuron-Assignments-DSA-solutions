@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+#include "SLL.cpp"
+using namespace std ;
+class ExtendedSLL : public SLL
+{
+    public:
+        ExtendedSLL() : SLL() {}
+        void removeDuplicate(); 
+};
+void ExtendedSLL::removeDuplicate()
+{
+    node *traverse ;
+    traverse = getStart() ;
+    while(traverse->next!=NULL)
+    {
+        if(traverse->data==traverse->next->data)
+        {
+            deleteSpecific(traverse->next);
+            traverse = getStart();
+        }
+        else
+        traverse = traverse->next ;
+    }
+}
