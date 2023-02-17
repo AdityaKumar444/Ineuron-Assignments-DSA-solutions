@@ -1,0 +1,24 @@
+// SLL.cpp is provided in folder
+
+#include<bits/stdc++.h>
+#include "SLL.cpp"
+using namespace std ;
+class ExtendedSLL : public SLL
+{
+    public:
+        ExtendedSLL() : SLL() {}
+        void swapPairwise();
+};
+void ExtendedSLL::swapPairwise()
+{
+    node *traverse ;
+    int temp ;
+    traverse = getStart();
+    while(traverse!=NULL && traverse->next!=NULL)
+    {
+        temp = traverse->data ;
+        traverse->data = traverse->next->data ;
+        traverse->next->data = temp ;
+        traverse = traverse->next->next ;
+    }
+}
