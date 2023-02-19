@@ -1,0 +1,22 @@
+// DLL.cpp is provided in folder
+
+#include"DLL.cpp"
+class ExtendedDLL : public DLL
+{
+    public:
+        void removeDuplicate();
+};
+void ExtendedDLL::removeDuplicate()
+{
+    node *traverse = getStart();
+    while(traverse->next!=NULL)
+    {
+        if(traverse->data==traverse->next->data)
+        {
+            deleteSpecific(traverse->next);
+            traverse = getStart();
+        }
+        else
+        traverse = traverse->next ;
+    }
+}
