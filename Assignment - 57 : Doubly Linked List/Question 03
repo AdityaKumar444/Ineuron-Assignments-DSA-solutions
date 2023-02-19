@@ -1,0 +1,15 @@
+// DLL.cpp is provided in folder
+
+#include"DLL.cpp"
+class ExtendedDLL : public DLL
+{
+    public:
+        void insertInSorted(int);
+};
+void ExtendedDLL::insertInSorted(int value)
+{
+    node *traverse = getStart();
+    while(traverse->data < value)
+        traverse = traverse->next ;
+    insertAfter(traverse->prev,value);
+}
