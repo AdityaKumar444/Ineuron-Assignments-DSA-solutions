@@ -10,10 +10,14 @@ time.
 2. Given a sorted doubly linked list of positive distinct elements, the task is to find pairs
 in a doubly-linked list whose sum is equal to given value x, without using any extra
 space?
+
 Example:
- Input :- 1<->2<->4<->5<->6<->8<->9
-         x = 7 
- Output :- (6,1),(5,2)
+
+Input :- 1<->2<->4<->5<->6<->8<->9
+
+x = 7 
+
+Output :- (6,1),(5,2)
 
 3. Given a sorted doubly linked list and a value to insert, write a function to insert the
 value in a sorted way. Initial doubly linked list
@@ -35,23 +39,37 @@ is a given positive integer and is smaller than the count of nodes in the linked
 
 9. Given a Doubly linked list containing N nodes, the task is to remove all the nodes
 from the list which contains elements whose digit sum is even.
+
 Example:
+
 Input: DLL = 18 <=> 15 <=> 8 <=> 9 <=> 14
+
 Output: 18 <=> 9 <=> 14
+
 Explanation:
 
 The linked list contains :
+
 18 -> 1 + 8 = 9
+
 15 -> 1 + 5 = 6
+
 8 -> 8
+
 9 -> 9
+
 14 -> 1 + 4 = 5
-Here, digit sum for nodes containing 15 and 8 are even.
-Hence, these nodes have been deleted.
+
+Here, digit sum for nodes containing 15 and 8 are even. Hence, these nodes have been deleted.
+
 Input: DLL = 5 <=> 3 <=> 4 <=> 2 <=> 9
+
 Output: 5 <=> 3 <=> 9
+
 Explanation:
+
 The linked list contains two digit sum values 4 and 2.
+
 Hence, these nodes have been deleted.
 
 10. Given a doubly linked list containing N nodes, the task is to remove all the nodes
