@@ -1,0 +1,28 @@
+// DLL.cpp is provided in folder
+
+#include"DLL.cpp"
+class ExtendedDLL : public DLL
+{
+    public:
+        void removeDuplicateUnsorted();
+};
+void ExtendedDLL::removeDuplicateUnsorted()
+{
+    node *t1 = getStart();
+    node *t2 ;
+    while(t1->next!=NULL)
+    {
+        t2 = t1->next ;
+        while(t2!=NULL)
+        {
+            if(t1->data==t2->data)
+            {
+                deleteSpecific(t2);
+                t2 = t1->next ;
+            }
+            else
+            t2 = t2->next ;
+        }
+        t1 = t1->next ;
+    }
+}
