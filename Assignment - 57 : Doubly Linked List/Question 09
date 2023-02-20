@@ -1,0 +1,32 @@
+// DLL.cpp is provided in folder
+
+#include"DLL.cpp"
+class ExtendedDLL : public DLL
+{
+    public:
+        void removeDigitSumEven();
+};
+void ExtendedDLL::removeDigitSumEven()
+{
+    if(getStart()!=NULL)
+    {
+        int x , sum ;
+        node *t = getStart();
+        while(t!=NULL)
+        {
+            x = t->data , sum = 0 ;
+            while(x)
+            {
+                sum = sum + x%10 ;
+                x = x/10 ;
+            }
+            if(sum%2==0)
+            {
+                deleteSpecific(t);
+                t = getStart();
+            }
+            else
+                t = t->next ;
+        }
+    }
+}
