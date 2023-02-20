@@ -1,0 +1,43 @@
+// DLL.cpp and DynamicArray.cpp is provided in folder
+
+#include"DLL.cpp"
+#include"DynamicArray.cpp"
+class ExtendedDLL : public DLL
+{
+    public:
+        void removeFibonacci();
+};
+void ExtendedDLL::removeFibonacci()
+{
+    node *t = getStart() , *t1 ;
+    int greatest = INT_MIN ;
+    while(t!=NULL)
+    {
+        if(t->data > greatest)
+        greatest = t->data ;
+        t = t->next ;
+    }
+    DynArray arr(greatest+1);
+    int n1 = -1 , n2 = 1 , n3 ;
+    for(int i=0 ; i<greatest+1 ; i++)
+    {
+        n3 = n1 + n2 ;
+        arr.insert(i,n3);
+        n1 = n2 ;
+        n2 = n3 ;
+    }
+    t = getStart();
+    while(t!=NULL)
+    {
+        t1 = t->next ;
+        for(int i=0 ; i<greatest+1 ; i++)
+        {
+            if(t->data==arr.getElement(i))
+            {
+                deleteSpecific(t);
+                break;
+            }
+        }
+        t = t1 ;
+    }
+}
