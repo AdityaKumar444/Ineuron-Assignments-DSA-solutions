@@ -23,6 +23,7 @@ class DLL
         void deleteLast();
         void deleteSpecific(node *) ;
         void display();
+        void setStart(node *x) { start = x ;}
         node *getStart() { return start ;}
         ~DLL()
         {
