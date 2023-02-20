@@ -1,0 +1,32 @@
+// DLL.cpp is provided in folder
+
+#include"DLL.cpp"
+class ExtendedDLL : public DLL
+{
+    public:
+        void sortBiotonic();
+};
+void ExtendedDLL::sortBiotonic()
+{
+    node *t1 , *t2 , *t3 ;
+    int temp ;
+    t1 = t2 = getStart();
+    while(t2->next!=NULL)
+        t2 = t2->next ;
+    t3 = t2 ;
+    while(t1->next!=NULL)
+    {
+        t2 = t3 ;
+        while(t2!=t1)
+        {
+            if(t1->data > t2->data)
+            {
+                temp = t1->data ;
+                t1->data = t2->data ;
+                t2->data = temp ;
+            }
+            t2 = t2->prev ;
+        }
+        t1 = t1->next ;
+    }
+}
