@@ -1,0 +1,24 @@
+// DLL.cpp is provided in folder
+
+#include"DLL.cpp"
+class ExtendedDLL : public DLL
+{
+    public:
+        void reverse();
+};
+void ExtendedDLL::reverse()
+{
+    node * t = getStart() , *temp ;
+    while(t->next!=NULL)
+        t = t->next ;
+    setStart(t);
+    while(t)
+    {
+        temp = t->prev ;
+        t->prev = t->next ;
+        t->next = temp ;
+        if(t->next==NULL)
+        break;
+        t = t->next ;
+    }
+}
