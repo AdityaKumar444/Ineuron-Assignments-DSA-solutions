@@ -1,0 +1,40 @@
+// DLL.cpp is provided in folder
+
+#include"DLL.cpp"
+class ExtendedDLL : public DLL
+{
+    public:
+        int count();
+        void rotateClockWise(int);
+};
+int ExtendedDLL::count()
+{
+    int cnt = 0 ;
+    node *traverse = getStart();
+    while(traverse!=NULL)
+    {
+        cnt++;
+        traverse = traverse->next ;
+    }
+    return cnt ;
+}
+void ExtendedDLL::rotateClockWise(int N)
+{
+    if(N<count() && N!=0)
+    {
+        int cnt = this->count() - N , x = 1 ;
+        node *temp = getStart() , *last = getStart() ;
+        while(x<cnt)
+        {
+            temp = temp->next ;
+            x++;   
+        }
+        while(last->next!=NULL)
+            last = last->next ;
+        last->next = getStart();
+        setStart(temp->next);
+        temp->next->prev = NULL; 
+        temp->next = NULL;
+        last->next->prev = last;
+    }   
+}
