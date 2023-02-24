@@ -1,0 +1,17 @@
+~CLL() 
+{
+     while(last!=NULL)
+        deleteFirst();
+}
+void CLL::deleteFirst()
+{
+    if(last!=NULL)
+    {
+        node *temp = last->next ;
+        if(last==last->next)
+            last = NULL ;
+        else
+            last->next = temp->next ;
+        delete temp ;
+    }  
+}
