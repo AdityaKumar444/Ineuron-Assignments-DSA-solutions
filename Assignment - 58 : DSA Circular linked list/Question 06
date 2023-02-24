@@ -1,0 +1,42 @@
+#include"CLL.cpp"
+class extCLL : public CLL
+{
+    public:
+        int countNodes(node *);
+        bool identicalOrNot(extCLL);
+};
+bool extCLL::identicalOrNot(extCLL obj)
+{
+    node *t1 = this->getLast() , *t2 = obj.getLast() ;
+    int x = this->countNodes(t1) , y = obj.countNodes(t2) , z , cnt = 0 ;
+    if(x==y)
+    {
+        z = x ;
+        while(z--)
+        {
+            if(t1->data==t2->data)
+                cnt++ ;
+            else
+            {
+                cnt = 0 ;
+                break;
+            }
+            t1 = t1->next ;
+            t2 = t2->next ;
+        }
+        if(cnt>0)
+            return true ;
+    }
+    return false ;
+}
+int extCLL::countNodes(node *tail)
+{
+    int count = 0 ;
+    node *t = tail ;
+    do
+    {
+        count++ ;
+        t = t->next ;
+    } while (t!=tail);   
+    return count ;
+}
