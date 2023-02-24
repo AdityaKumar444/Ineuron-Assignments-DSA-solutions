@@ -1,0 +1,15 @@
+#include"DLL.cpp"
+class ExtDLL : public DLL
+{
+    public:
+        node * convertCircular(node *);
+};
+node * ExtDLL::convertCircular(node *head)
+{
+    Node * t = head ;
+    while(head->next!=NULL)
+        head = head->next ;
+    t->prev = head ;
+    head->next = t ;
+    return t ;
+}
