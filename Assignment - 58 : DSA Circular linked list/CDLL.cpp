@@ -20,6 +20,7 @@ class CDLL
         void deleteLast();
         void deleteSpecific(node *);
         void display();
+        node * getStart() { return start ; }
         ~CDLL()
         {
             while(start!=NULL)
