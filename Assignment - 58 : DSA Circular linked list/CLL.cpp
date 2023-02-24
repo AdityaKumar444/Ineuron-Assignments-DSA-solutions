@@ -18,6 +18,7 @@ class CLL
         void deleteFirst();
         void deleteLast();
         void deleteSpecific(node *);
+        node * getStart() { return start ; }
         ~CLL() 
         {
             while(last!=NULL)
