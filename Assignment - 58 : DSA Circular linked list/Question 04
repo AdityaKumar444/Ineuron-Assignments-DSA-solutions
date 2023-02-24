@@ -1,0 +1,19 @@
+// CLL.cpp is provided in folder
+
+#include"CLL.cpp"
+class extCLL : public CLL
+{
+    public:
+        int countNodes(node *);
+};
+int extCLL::countNodes(node *tail)
+{
+    int count = 0 ;
+    node *t = tail ;
+    do
+    {
+        count++ ;
+        t = t->next ;
+    } while (t!=tail);   
+    return count ;
+}
