@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std ; 
+struct node
+{
+    node *prev ;
+    int data ;
+    node *next ;
+};
+class CDLL
+{
+    private:
+        node *start ;
+    public:
+        CDLL() { start = NULL ; }
+        void deleteSpecific(node *);
+};
+void CDLL::deleteSpecific(node *t)
+{
+    if(start!=NULL && t!=NULL)
+    {
+        if(t->next==t->next->prev)
+            start = NULL ;
+        else if(t==start)
+            start = t->next ; 
+        t->prev->next = t->next ;
+        t->next->prev = t->prev ;
+        delete t ;
+    }
+}
