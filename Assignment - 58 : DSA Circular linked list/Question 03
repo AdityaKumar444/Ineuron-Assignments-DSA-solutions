@@ -1,0 +1,12 @@
+bool extDLL::circularOrNot(node *head)
+{
+    if(head!=NULL)
+    {
+        node *temp = head ;
+        while(temp->next!=head)
+            temp = temp->next ;
+        if(head->prev->next==head && head->prev==temp)
+        return true ;
+    }
+    return false ;
+}
