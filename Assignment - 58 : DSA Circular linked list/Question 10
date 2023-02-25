@@ -1,0 +1,28 @@
+// CDLL.cpp is provided in folder
+
+#include"CDLL.cpp"
+class extDLL : public CDLL
+{
+    public:
+        node * reverse(node *);
+};
+node * extDLL::reverse(node *head)
+{
+    node *t1=head , *t2=head->next , *t3=head->next->next;
+    do
+    {
+        t2->next = t1 ;
+        t1 = t2 ;
+        t2 = t3 ;
+        t3 = t3->next ;
+    } while (t1!=head);
+    t1 = head->next , t2 = t1->next , t3 = t2->next ;
+    do
+    {
+        t2->prev = t1 ;
+        t1 = t2 ;
+        t2 = t3 ;
+        t3 = t3->next ;
+    } while (t1!=head->next);
+    return t1 ;
+}
