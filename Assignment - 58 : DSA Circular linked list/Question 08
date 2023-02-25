@@ -1,0 +1,19 @@
+// CDLL.cpp is provided in folder
+
+#include"CDLL.cpp"
+class extDLL : public CDLL
+{
+    public:
+        int largest(node *);
+};
+int extDLL::largest(node *head)
+{
+    int max = INT_MIN ;
+    do
+    {
+        if(head->data > max)
+            max = head->data ;
+        head = head->next ;
+    } while (head!=getStart());
+    return max ;
+}
