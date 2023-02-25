@@ -1,17 +1,39 @@
-~CLL() 
+// CLL.cpp is provided in folder
+
+#include"CLL.cpp"
+class extCLL : public CLL
 {
-     while(last!=NULL)
-        deleteFirst();
-}
-void CLL::deleteFirst()
+    public:
+        int countNodes(node *);
+        void deleteOddNodes();
+};
+void extCLL::deleteOddNodes()
 {
-    if(last!=NULL)
+    node *t = this->getLast()->next , *temp = this->getLast()->next ;
+    int cnt = this->countNodes(t);
+    if(getLast()!=NULL)
     {
-        node *temp = last->next ;
-        if(last==last->next)
-            last = NULL ;
-        else
-            last->next = temp->next ;
-        delete temp ;
-    }  
+        while(cnt>0)
+        {
+            if(cnt%2!=0)
+            {
+                t = t->next->next ;
+                this->deleteSpecific(temp);
+                temp = t ;
+                cnt--;
+            }
+            cnt--;
+        }
+    }
+}
+int extCLL::countNodes(node *tail)
+{
+    int count = 0 ;
+    node *t = tail ;
+    do
+    {
+        count++ ;
+        t = t->next ;
+    } while (t!=tail);   
+    return count ;
 }
