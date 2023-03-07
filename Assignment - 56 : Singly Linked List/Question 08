@@ -1,20 +1,51 @@
-// SLL.cpp is provided in folder
-
 #include<bits/stdc++.h>
-#include"SLL.cpp"
 using namespace std ;
-class STACK : public SLL 
+struct node
 {
-    public:
-        STACK() : SLL() {}
-        void push(int);
-        void pop();
+    int data ;
+    node *next ;
 };
-void STACK::push(int item)
+class Stack
 {
-    insertAtLast(item);
+    private:
+        node *top ;
+    public:
+        Stack() { top = NULL ;}
+        void push(int);
+        int peek();
+        void pop();
+        bool isEmpty();
+        ~Stack()
+        {
+            while(top)
+                pop();
+        }
+};
+void Stack::push(int item)
+{
+    node *x = new node ;
+    x->data = item ;
+    x->next = top ;
+    top = x ;
 }
-void STACK::pop()
+int Stack::peek()
 {
-    deleteLast();
+    if(top)
+        return top->data ;
+    return INT_MIN ;
+}
+void Stack::pop()
+{
+    if(top)
+    {
+        node *temp = top ;
+        top = top->next ;
+        delete temp ;   
+    }
+}
+bool Stack::isEmpty()
+{
+    if(top==NULL)
+        return true ;
+    return false ;
 }
