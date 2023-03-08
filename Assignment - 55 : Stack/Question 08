@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std ;
+string compressString(string &); 
+string compressString(string &str) 
+{
+    string res , c , d ;
+    stack<char> s ;
+    int count;
+    for(int i=0 ; i <= str.length() ; i++)
+    {
+        count = 0 ;
+        if(s.empty())
+            s.push(str[i]);
+        else 
+        {
+            if((str[i]==s.top() || str[i]==s.top()+32 || str[i]==s.top()-32))
+                s.push(str[i]);
+            else
+            {
+                while(!s.empty())
+                {
+                    c = s.top();
+                    s.pop();
+                    count++;
+                }
+                transform(c.begin(), c.end(), c.begin(), ::tolower);
+                d = to_string(count);
+                res = res + d + c ;
+                i--;
+            }
+        }
+    }
+    return res ;
+}
