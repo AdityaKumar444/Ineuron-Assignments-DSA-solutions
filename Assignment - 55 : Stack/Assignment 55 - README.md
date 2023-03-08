@@ -18,10 +18,10 @@ Stack
         ModifiedStack = {1 3 4}
         Explanation: As the number of elements is 4, hence the middle element will be the 2nd element which is deleted
 
-2. Given an expression string x. Examine whether the pairs and the orders of
-“{“,”}”,”(“,”)”,”[“,”]” are correct in exp.
-For example, the function should return 'true' for exp = “[()]{}{[()()]()}” and 'false' for
-exp = “[(])”.
+2. Given an expression string x. Examine whether the pairs and the orders of “{“,”}”,”(“,”)”,”[“,”]” are correct in exp.
+
+        For example, the function should return 'true' for exp = “[()]{}{[()()]()}” and 'false' for exp = “[(])”.
+        
 3. Complete the function to find spiral order traversal of a tree. For the tree below,
 function should return 1, 2, 3, 4, 5, 6, 7.
 
