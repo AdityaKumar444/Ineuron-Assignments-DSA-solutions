@@ -1,0 +1,35 @@
+#include"Stack.cpp"
+class SpecialStack : public Stack
+{
+    private:
+        Stack min ;
+    public:
+        void push(int);
+        void pop();
+        int getMin();
+};
+void SpecialStack::push(int item)
+{
+    if(isEmpty())
+    {
+        Stack::push(item);
+        min.push(item);
+    }
+    else
+    {
+        Stack::push(item);
+        if(item < min.peek())
+            min.push(item);
+        else
+            min.push(min.peek());
+    }
+}
+void SpecialStack::pop()
+{
+    Stack::pop();
+    min.pop();
+}
+int SpecialStack::getMin()
+{
+    return min.peek();
+}
