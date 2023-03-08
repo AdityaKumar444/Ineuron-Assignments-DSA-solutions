@@ -3,6 +3,7 @@ Assignment-55 : A Job Ready Bootcamp in C++, DSA and IOT
 Stack
 
 1. Given a stack with push(), pop(), empty() operations, delete the middle of the stack without using any additional data structure.
+ 
         Middle: ceil((size_of_stack+1)/2) (1-based index)
         Example 1:
         Input:
