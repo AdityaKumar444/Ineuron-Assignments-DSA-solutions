@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std ; 
+string reverse(string &);
+string reverse(string &str)
+{
+    string s1 ;
+    stack<char> s ;
+    for (int i = 0; i < str.length(); i++)
+        s.push(str[i]);
+    while(!s.empty())
+    {
+        s1 = s1 + s.top() ;
+        s.pop();
+    }
+    return s1 ;
+}
