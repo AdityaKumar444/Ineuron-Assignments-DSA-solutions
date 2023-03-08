@@ -38,30 +38,31 @@ Stack
         / \
         40 60
         Output: 10 20 30 60 40
-4. Given a stack, the task is to sort it such that the top of the stack has the greatest
-element.
-Example 1:
-Input:
-Stack: 3 2 1
-Output: 3 2 1
-Example 2:
 
-Input:
-Stack: 11 2 32 3 41
-Output: 41 32 11 3 2
+4. Given a stack, the task is to sort it such that the top of the stack has the greatest element.
+
+        Example 1:
+        Input:
+        Stack: 3 2 1
+        Output: 3 2 1
+        Example 2:
+        Input:
+        Stack: 11 2 32 3 41
+        Output: 41 32 11 3 2
+
 5. Reverse the string using stack.
+
 6. Given a string S, the task is to find the bracket numbers.
-Example 1:
-Input: S = "(aa(bdc))p(dee)â€‹"
-Output: 1 2 2 1 3 3
-Explanation: The highlighted brackets in the given string (aa(bdc))p(dee) has been
-assigned the numbers as: 1 2 2 1 3 3.
-Example 2:
-Input: S = "(((()("
-Output: 1 2 3 4 4 5
-Explanation: The highlighted brackets in
-the given string (((()( has been assigned
-the numbers as: 1 2 3 4 4 5
+
+        Example 1:
+        Input: S = "(aa(bdc))p(dee)â€‹"
+        Output: 1 2 2 1 3 3
+        Explanation: The highlighted brackets in the given string (aa(bdc))p(dee) has been assigned the numbers as: 1 2 2 1 3 3.
+        Example 2:
+        Input: S = "(((()("
+        Output: 1 2 3 4 4 5
+        Explanation: The highlighted brackets in the given string (((()( has been assigned the numbers as: 1 2 3 4 4 5
+
 7. Design a data-structure SpecialStack that supports all the stack operations like
 push(), pop(), isEmpty(), isFull() and an additional operation getMin() which should
 return minimum element from the SpecialStack. Your task is to complete all the
