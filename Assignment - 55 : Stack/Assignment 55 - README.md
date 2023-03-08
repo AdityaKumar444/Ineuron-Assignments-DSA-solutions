@@ -4,9 +4,9 @@ Stack
 
 1. Given a stack with push(), pop(), empty() operations, delete the middle of the stack without using any additional data structure.
 
-Middle: ceil((size_of_stack+1)/2) (1-based index)
+        Middle: ceil((size_of_stack+1)/2) (1-based index)
 
-Example 1:
+        Example 1:
 
 Input:
 
