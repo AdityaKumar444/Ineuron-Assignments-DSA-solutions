@@ -88,41 +88,44 @@ Stack
         Output: "3a2c1a"
         Explanation: As 'a' appears 3 times consecutively and 'c' also 2 times, and then 'a' 1 time.
 
-9. Given two strings s and t, return true if they are equal when both are typed into empty
-text editors. '#' means a backspace character. Note that after backspacing an empty
-text, the text will continue empty.
-Example 1:
+9. Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character. Note that after backspacing an empty text, the text will continue empty.
 
-Input: s = "ab#c", t = "ad#c"
-Output: true
-Explanation: Both s and t become "ac".
-Example 2:
-Input: s = "ab##", t = "c#d#"
-Output: true
-Explanation: Both s and t become "".
-Example 3:
-Input: s = "a#c", t = "b"
-Output: false
-Explanation: s becomes "c" while t becomes "b".
+        Example 1:
+        Input: s = "ab#c", t = "ad#c"
+        Output: true
+        Explanation: Both s and t become "ac".
+
+        Example 2:
+        Input: s = "ab##", t = "c#d#"
+        Output: true
+        Explanation: Both s and t become "".
+        
+        Example 3:
+        Input: s = "a#c", t = "b"
+        Output: false
+        Explanation: s becomes "c" while t becomes "b".
+
 10. Your task is to implement 2 stacks in one array efficiently.
-Example 1:
-Input:
-enqueue(2)
-enqueue(3)
-dequeue()
-enqueue(4)
-dequeue()
-Output: 2 3
-Explanation:
-enqueue(2) the queue will be {2}
-enqueue(3) the queue will be {3 2}
-dequeue() the poped element will be 2
-the stack will be {3}
-enqueue(4) the stack will be {4 3}
-dequeue() the poped element will be 3.
-Example 2:
-Input:
-enqueue(2)
-dequeue()
-dequeue()
-Output: 2 -1
+        
+        Example 1:
+        Input:
+        enqueue(2)
+        enqueue(3)
+        dequeue()
+        enqueue(4)
+        dequeue()
+        Output: 2 3
+        Explanation:
+        enqueue(2) the queue will be {2}
+        enqueue(3) the queue will be {3 2}
+        dequeue() the poped element will be 2
+        the stack will be {3}
+        enqueue(4) the stack will be {4 3}
+        dequeue() the poped element will be 3.
+        
+        Example 2:
+        Input:
+        enqueue(2)
+        dequeue()
+        dequeue()
+        Output: 2-1
