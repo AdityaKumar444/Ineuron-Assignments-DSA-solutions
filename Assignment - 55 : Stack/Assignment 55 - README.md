@@ -22,24 +22,22 @@ Stack
 
         For example, the function should return 'true' for exp = “[()]{}{[()()]()}” and 'false' for exp = “[(])”.
         
-3. Complete the function to find spiral order traversal of a tree. For the tree below,
-function should return 1, 2, 3, 4, 5, 6, 7.
+3. Complete the function to find spiral order traversal of a tree. For the tree below, function should return 1, 2, 3, 4, 5, 6, 7.
 
-Example 1:
-Input:
-1
-/ \
-3 2
-Output:1 3 2
-
-Example 2:
-Input:
-10
-/ \
-20 30
-/ \
-40 60
-Output: 10 20 30 60 40
+        Example 1:
+        Input:
+        1
+        / \
+        3 2
+        Output:1 3 2
+        Example 2:
+        Input:
+        10
+        / \
+        20 30
+        / \
+        40 60
+        Output: 10 20 30 60 40
 4. Given a stack, the task is to sort it such that the top of the stack has the greatest
 element.
 Example 1:
