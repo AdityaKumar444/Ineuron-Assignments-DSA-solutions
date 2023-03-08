@@ -11,6 +11,7 @@ Stack
         Output:
         ModifiedStack = {1, 2, 4, 5}
         Explanation: As the number of elements is 5, hence the middle element will be the 3rd element which is deleted
+        
         Example 2:
         Input:
         Stack = {1 2 3 4}
@@ -30,6 +31,7 @@ Stack
         / \
         3 2
         Output:1 3 2
+        
         Example 2:
         Input:
         10
@@ -45,6 +47,7 @@ Stack
         Input:
         Stack: 3 2 1
         Output: 3 2 1
+        
         Example 2:
         Input:
         Stack: 11 2 32 3 41
@@ -58,33 +61,33 @@ Stack
         Input: S = "(aa(bdc))p(dee)â€‹"
         Output: 1 2 2 1 3 3
         Explanation: The highlighted brackets in the given string (aa(bdc))p(dee) has been assigned the numbers as: 1 2 2 1 3 3.
+        
         Example 2:
         Input: S = "(((()("
         Output: 1 2 3 4 4 5
         Explanation: The highlighted brackets in the given string (((()( has been assigned the numbers as: 1 2 3 4 4 5
 
-7. Design a data-structure SpecialStack that supports all the stack operations like
-push(), pop(), isEmpty(), isFull() and an additional operation getMin() which should
-return minimum element from the SpecialStack. Your task is to complete all the
-functions, using stack data-Structure.
-Example 1:
-Input:
-Stack: 18 19 29 15 16
-Output: 15
-Explanation:
-The minimum element of the stack is 15.
-8. You are given the string S . Compress the string when lower and upper cases are the
-same. In compressed string characters should be in lowercase.
-Example 1:
-Input: S = "aaABBb"
-Output: "3a3b"
-Explanation: As 'a' appears 3 times consecutively and 'b' also 3 times, and 'b' and 'B'
-are considered the same.
-Example 2:
-Input: S = "aaacca"
-Output: "3a2c1a"
-Explanation: As 'a' appears 3 times consecutively and 'c' also 2 times, and then 'a' 1
-time.
+7. Design a data-structure SpecialStack that supports all the stack operations like push(), pop(), isEmpty(), isFull() and an additional operation getMin() which should return minimum element from the SpecialStack. Your task is to complete all the functions, using stack data-Structure.
+
+        Example 1:
+        Input:
+        Stack: 18 19 29 15 16
+        Output: 15
+        Explanation:
+        The minimum element of the stack is 15.
+
+8. You are given the string S . Compress the string when lower and upper cases are the same. In compressed string characters should be in lowercase.
+
+        Example 1:
+        Input: S = "aaABBb"
+        Output: "3a3b"
+        Explanation: As 'a' appears 3 times consecutively and 'b' also 3 times, and 'b' and 'B' are considered the same.
+        
+        Example 2:
+        Input: S = "aaacca"
+        Output: "3a2c1a"
+        Explanation: As 'a' appears 3 times consecutively and 'c' also 2 times, and then 'a' 1 time.
+
 9. Given two strings s and t, return true if they are equal when both are typed into empty
 text editors. '#' means a backspace character. Note that after backspacing an empty
 text, the text will continue empty.
