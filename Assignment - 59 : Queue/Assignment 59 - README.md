@@ -18,9 +18,9 @@ Queue
 
 7. Give an algorithm for reversing a queue Q. Only the following standard operations are allowed on queue.
    
-    a. enqueue(x): Add an item x to the rear of the queue.
-    b. dequeue(): Remove an item from the front of the queue.
-    c. empty(): Checks if a queue is empty or not.
+        a. enqueue(x): Add an item x to the rear of the queue.
+        b. dequeue(): Remove an item from the front of the queue.
+        c. empty(): Checks if a queue is empty or not.
 
 8. Given an integer k and a queue of integers, The task is to reverse the order of the
 first k elements of the queue, leaving the other elements in the same relative order.
