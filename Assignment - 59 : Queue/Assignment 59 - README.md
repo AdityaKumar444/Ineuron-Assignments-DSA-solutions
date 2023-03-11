@@ -52,8 +52,9 @@ Queue
            Costof this operation 4+5 = 9.
         3) Finally connect the two ropes and all ropes have connected. 
            Cost of this operation 9+6 =15
-        Total cost for connecting all ropes is 5 + 9 + 15 = 29. This is the optimized cost for connecting ropes. Other ways of connecting ropes would always have
-        same or more cost. For example, if we connect 4 and 6 first (we get three rope of 3, 2 and 10), then connect 10 and 3 (we get two rope of 13 and 2).
+        Total cost for connecting all ropes is 5 + 9 + 15 = 29. This is the optimized cost for connecting ropes.
+        Other ways of connecting ropes would always have same or more cost. 
+        For example, if we connect 4 and 6 first (we get three rope of 3, 2 and 10), then connect 10 and 3 (we get two rope of 13 and 2).
         Finally we connect 13 and 2. Total cost in this way is 10 + 13 + 15 = 38.
         
         Example 2:
