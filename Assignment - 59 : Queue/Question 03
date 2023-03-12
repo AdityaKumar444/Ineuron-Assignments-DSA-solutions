@@ -1,0 +1,67 @@
+#include<bits/stdc++.h>
+using namespace std;
+class kQueues
+{
+	int *arr;
+	int *front;
+	int *rear;	
+	int *next;
+	int n, k;
+	int freespot;
+public:
+	kQueues(int k, int n);
+	bool isFull() 
+    {
+        return (freespot == -1);
+    }
+	void enqueue(int item, int qn);
+	int dequeue(int qn);
+	bool isEmpty(int qn) 
+    {
+        return (front[qn] == -1); 
+    }
+};
+kQueues::kQueues(int k1, int n1)
+{
+	k = k1, n = n1;
+	arr = new int[n];
+	front = new int[k];
+	rear = new int[k];
+	next = new int[n];
+	for (int i = 0; i < k; i++)
+		front[i] = -1;
+	freespot = 0;
+	for (int i=0; i<n-1; i++)
+		next[i] = i+1;
+	next[n-1] = -1;
+}
+void kQueues::enqueue(int value, int qn)
+{
+	if (isFull())
+	{
+		cout << "\nQueue Overflow\n";
+		return;
+	}
+	int index = freespot;	
+	freespot = next[index];
+	if (isEmpty(qn))
+		front[qn] = index;
+	else
+		next[rear[qn]] = index;
+	next[index] = -1;
+	rear[qn] = index;
+	arr[index] = value;
+}
+int kQueues::dequeue(int qn)
+{
+	if (isEmpty(qn))
+	{
+		cout << "\nQueue Underflow\n";
+		return INT_MIN;
+	}
+	int index = front[qn];
+	front[qn] = next[index];
+	next[index] = freespot;
+	freespot = index;
+	return arr[index];
+}
