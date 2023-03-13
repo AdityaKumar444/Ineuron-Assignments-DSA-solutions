@@ -1,0 +1,44 @@
+#include<bits/stdc++.h>
+using namespace std ;
+int findMin(queue<int> &,int); 
+void insertMin(queue<int> & , int);
+void sort(queue<int> &);
+int findMin(queue<int> &q , int index)
+{
+    int min = INT_MAX , temp ;
+    for(int i=0 ; i<q.size() ; i++)
+    {
+        if(q.front() <= min && i<=index)
+            min = q.front();
+        temp = q.front();
+        q.pop();
+        q.push(temp);
+    }
+    return min ;
+} 
+void insertMin(queue<int> &q , int min)
+{
+    int temp , n ;
+    n = q.size();
+    for(int i=1 ; i<=n ; i++)
+    {
+        if(q.front()!=min)
+        {
+            temp = q.front();
+            q.pop();
+            q.push(temp);
+        }
+        else
+            q.pop();
+    }
+    q.push(min);
+}
+void sort(queue<int> &q)
+{
+    int min ;
+    for(int i=1 ; i<=q.size() ; i++)
+    {
+        min = findMin(q , q.size()-i);
+        insertMin(q,min);
+    }
+}
