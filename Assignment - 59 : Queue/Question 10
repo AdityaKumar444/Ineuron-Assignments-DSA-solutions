@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std ; 
+int minCostofRope(int [],int);
+int minCostofRope(int arr[] , int size)
+{
+    sort(arr , arr+size);
+    priority_queue<int , vector<int>, greater<int>> p ;
+    for(int i=0 ; i<size ; i++)
+        p.push(arr[i]);
+    int sum , cost = 0;
+    while(p.size()!=1)
+    {
+        sum = 0 ;
+        sum = sum + p.top();
+        p.pop();
+        sum = sum + p.top();
+        p.pop();
+        cost = cost + sum ;
+        p.emplace(sum);
+    }
+    return cost ;
+}
