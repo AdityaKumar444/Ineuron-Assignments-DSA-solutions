@@ -1,0 +1,11 @@
+#include<bits/stdc++.h>
+using namespace std ; 
+queue<int> reverse(queue<int> &q)
+{
+    int y = q.front();
+    q.pop();
+    if(!q.empty())
+        reverse(q); // recursive approach
+    q.push(y);
+    return q ;
+}
