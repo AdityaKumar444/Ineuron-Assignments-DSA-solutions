@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std ; 
+queue<int> rev(queue<int> & , int);
+void reverse(queue<int> &);
+queue<int> rev(queue<int> &q , int k)
+{
+    queue<int> s ;
+    while(k)
+    {
+        s.push(q.front());
+        q.pop();
+        k--;
+    }
+    reverse(s);
+    while(!q.empty())
+    {
+        s.push(q.front());
+        q.pop();
+    }
+    return s ;
+}
+void reverse(queue<int> &q)
+{
+    int y = q.front();
+    q.pop();
+    if(!q.empty())
+        reverse(q);
+    q.push(y);
+}
