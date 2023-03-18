@@ -1,0 +1,31 @@
+// BST.cpp is provided in folder
+
+#include"BST.cpp"
+void print_3rdLevel(node *,int);
+void print_3rdLevel(node *ptr , int level)
+{
+    if(level==0 && ptr!=NULL)
+        cout << ptr->data << " " ;
+    if(level!=0)
+    {
+        print_3rdLevel(ptr->left , level-1);
+        print_3rdLevel(ptr->right , level-1);
+    }
+}
+int main()
+{
+    BST b ;
+    b.insert(40);
+    b.insert(30);
+    b.insert(50);
+    b.insert(25);
+    b.insert(35);
+    b.insert(45);
+    b.insert(60);
+    b.insert(15);
+    b.insert(28);
+    b.insert(55);
+    b.insert(70);
+    print_3rdLevel(b.getRoot(),3);
+    return 0 ;
+}
