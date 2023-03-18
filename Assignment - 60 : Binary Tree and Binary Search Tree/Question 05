@@ -1,0 +1,27 @@
+// BST.cpp is provided in folder
+
+#include"BST.cpp"
+int maxElement(node *);
+int maxElement(node *ptr)
+{
+    while(ptr->right!=NULL)
+        ptr = ptr->right ;
+    return ptr->data ;
+}
+int main()
+{
+    BST b ;
+    b.insert(40);
+    b.insert(30);
+    b.insert(50);
+    b.insert(25);
+    b.insert(35);
+    b.insert(45);
+    b.insert(60);
+    b.insert(15);
+    b.insert(28);
+    b.insert(55);
+    b.insert(70);
+    cout << maxElement(b.getRoot()) << endl ;
+    return 0 ;
+}
