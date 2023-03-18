@@ -1,0 +1,35 @@
+// BST.cpp is provided in folder
+
+#include"BST.cpp"
+int height(node*);
+int height(node *ptr)
+{
+    int ltree , rtree , ht ;
+    if(ptr==NULL)
+        return 0 ;
+    ltree = height(ptr->left) ;
+    rtree = height(ptr->right) ;
+    if(ltree >= rtree)
+        ht = ltree + 1 ;
+    else
+        ht = rtree  + 1 ;
+    return ht ;
+}
+int main()
+{
+    BST b ;
+    b.insert(40);
+    b.insert(30);
+    b.insert(50);
+    b.insert(25);
+    b.insert(35);
+    b.insert(45);
+    b.insert(60);
+    b.insert(15);
+    b.insert(28);
+    b.insert(55);
+    b.insert(70);
+    b.insert(68);
+    cout << height(b.getRoot());
+    return 0 ;
+}
