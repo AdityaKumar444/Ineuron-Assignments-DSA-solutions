@@ -1,0 +1,32 @@
+// BST.cpp is provided in folder
+
+#include"BST.cpp"
+int ans = 0 ;
+int diameter(node *);
+int diameter(node *ptr)
+{
+    if(ptr==NULL)
+        return 0 ;
+    int lt = diameter(ptr->left);
+    int rt = diameter(ptr->right);
+    ans = max(ans , lt+rt+1);
+    return max(lt,rt)+1 ;
+}
+int main()
+{
+    BST b ;
+    b.insert(40);
+    b.insert(30);
+    b.insert(50);
+    b.insert(25);
+    b.insert(35);
+    b.insert(45);
+    b.insert(60);
+    b.insert(15);
+    b.insert(28);
+    b.insert(55);
+    b.insert(70);
+    diameter(b.getRoot());
+    cout << ans ;
+    return 0 ;
+}
