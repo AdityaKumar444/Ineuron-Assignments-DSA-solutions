@@ -1,0 +1,40 @@
+// BST.cpp is provided in folder
+
+#include"BST.cpp"
+node * nthNode(node *,int);
+node * nthNode(node *ptr ,int node_num)
+{
+    static node *t = NULL;
+    static int count = 0 ;
+    if(ptr)
+    {
+        nthNode(ptr->left,node_num);
+        count++;
+        if(count==node_num)
+        {
+            t = ptr ;
+            return t ;
+        }
+        nthNode(ptr->right,node_num); 
+    }
+    return t ;
+}
+int main()
+{
+    BST b ;
+    b.insert(40);
+    b.insert(30);
+    b.insert(50);
+    b.insert(25);
+    b.insert(35);
+    b.insert(45);
+    b.insert(60);
+    b.insert(15);
+    b.insert(28);
+    b.insert(55);
+    b.insert(70);
+    node *t = nthNode(b.getRoot(),12);
+    if(t)
+        cout << t->data << endl ;
+    return 0;
+}
