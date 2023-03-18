@@ -6,7 +6,7 @@ void print_3rdLevel(node *ptr , int level)
 {
     if(level==0 && ptr!=NULL)
         cout << ptr->data << " " ;
-    if(level!=0)
+    if(level!=0 && ptr!=NULL)
     {
         print_3rdLevel(ptr->left , level-1);
         print_3rdLevel(ptr->right , level-1);
