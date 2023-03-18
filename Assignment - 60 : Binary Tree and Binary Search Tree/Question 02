@@ -1,0 +1,24 @@
+// BST.cpp is provided in folder
+
+#include"BST.cpp"
+int main()
+{
+    BST b ;
+    b.insert(40);
+    b.insert(30);
+    b.insert(50);
+    b.insert(25);
+    b.insert(35);
+    b.insert(45);
+    b.insert(60);
+    b.insert(15);
+    b.insert(28);
+    b.insert(55);
+    b.insert(70);
+    node *t = b.searchItem(15);
+    if(t!=NULL)
+        cout << "data is present at address = " << t ;
+    else
+        cout << "data not present" ; 
+    return 0 ;
+}
