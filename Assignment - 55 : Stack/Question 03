@@ -1,0 +1,79 @@
+// BST.cpp is provided in folder
+
+#include"BST.cpp"
+void spiral(node *,int,int,stack<int>&);
+void printSpiral(node *);
+int height(node *);
+int height(node *ptr)
+{
+    int ltree , rtree , ht ;
+    if(ptr==NULL)
+        return 0 ;
+    ltree = height(ptr->left) ;
+    rtree = height(ptr->right) ;
+    if(ltree >= rtree)
+        ht = ltree + 1 ;
+    else
+        ht = rtree  + 1 ;
+    return ht ;
+}
+void spiral(node *ptr , int level , int dir , stack<int> &s)
+{
+    if(ptr==NULL)
+        return;
+    if(level==0)
+    {
+        s.push(ptr->data) ;
+    }
+    else
+    {
+        if(dir%2==0)
+        {
+            spiral(ptr->left,level-1,dir,s);
+            spiral(ptr->right,level-1,dir,s);
+        }
+        else
+        {
+            spiral(ptr->right,level-1,dir,s);
+            spiral(ptr->left,level-1,dir,s);
+        }
+    }
+}
+void printSpiral(node *ptr)
+{
+    int ht = height(ptr);
+    int dir = 0 ;
+    stack<int> s , k ;
+    for(int i=0 ; i<ht ; i++)
+    {
+        spiral(ptr,i,dir,s);
+        dir++;
+    }
+    while(!s.empty())
+    {
+        k.push(s.top());
+        s.pop();
+    }
+    while(!k.empty())
+    {
+        cout << k.top() << " " ;
+        k.pop();
+    }
+}
+int main()
+{
+    BST b ;
+    b.insert(40);
+    b.insert(30);
+    b.insert(50);
+    b.insert(25);
+    b.insert(35);
+    b.insert(45);
+    b.insert(60);
+    b.insert(15);
+    b.insert(28);
+    b.insert(55);
+    b.insert(70);
+    printSpiral(b.getRoot());
+    return 0;
+}
