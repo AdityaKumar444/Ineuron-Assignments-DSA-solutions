@@ -1,0 +1,17 @@
+// AVLTree.cpp is provided in folder
+
+#include"AVLTree.cpp"
+int main()
+{
+    AVL tree ;
+    tree.insert(12);
+    tree.insert(18);
+    tree.insert(8);
+    tree.insert(11);
+    tree.insert(17);
+    tree.insert(5);
+    tree.insert(4);
+    tree.inOrder(tree.getRoot());
+    cout << endl ;
+    return 0 ;
+}
